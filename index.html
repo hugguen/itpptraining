@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>IT Passport Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="app-logo" onclick="location.reload()">
+                <i class="fa-solid fa-passport"></i> IT Passport
+            </div>
+            <div class="profile-card">
+                <div class="avatar-container">
+                    <div class="avatar">👨‍💻</div>
+                    <div class="level-badge" id="user-level">1</div>
+                </div>
+                <h3 id="user-title">研修生</h3>
+
+                <div class="stat-row">
+                    <span>経験値 (EXP)</span>
+                    <span id="user-exp" class="stat-value">0</span>
+                </div>
+                <div class="exp-bar-container">
+                    <div class="exp-bar-fill" id="exp-bar-fill" style="width: 0%"></div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-item active" onclick="switchMainTab('study')">
+                    <i class="fa-solid fa-book-open"></i> <span>過去問トレーニング</span>
+                </button>
+                <button class="nav-item" onclick="switchMainTab('mock')">
+                    <i class="fa-solid fa-trophy"></i> <span>実戦模試</span>
+                </button>
+                <button class="nav-item" onclick="switchMainTab('minigame')">
+                    <i class="fa-solid fa-gamepad"></i> <span>ミニゲーム</span>
+                </button>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section id="view-study" class="content-view active">
+                <div class="header-title">
+                    <h2 id="study-title">📚 過去問トレーニング</h2>
+                </div>
+
+                <div id="breadcrumb-nav"></div>
+
+                <div id="main-menu" class="card fade-in">
+                    <h3>年度を選択してください</h3>
+                    <div class="grid-buttons">
+                        <button class="year-btn" onclick="selectYear('2025')">2025年度</button>
+                        <button class="year-btn" onclick="selectYear('2024')">2024年度</button>
+                        <button class="year-btn" onclick="selectYear('2023')">2023年度</button>
+                    </div>
+                </div>
+
+                <div id="category-selection" class="card fade-in" style="display: none;">
+                    <h3 id="category-header"></h3>
+                    <div class="grid-buttons">
+                        <button class="cat-btn strategy" onclick="selectCategory('strategy')">
+                            <i class="fa-solid fa-chess"></i> ストラテジ系
+                        </button>
+                        <button class="cat-btn management" onclick="selectCategory('management')">
+                            <i class="fa-solid fa-briefcase"></i> マネジメント系
+                        </button>
+                        <button class="cat-btn technology" onclick="selectCategory('technology')">
+                            <i class="fa-solid fa-laptop-code"></i> テクノロジ系
+                        </button>
+                    </div>
+                </div>
+
+                <div id="mock-intro-screen" class="card fade-in"
+                    style="display: none; text-align: center; padding: 40px;">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">🏆</div>
+                    <h2 style="color: #2c3e50; margin-bottom: 10px;">ITパスポート 実戦模試</h2>
+                    <p style="color: #666; margin-bottom: 30px;">本番と同じ形式で試験を行います。</p>
+
+                    <div class="exam-rules"
+                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; display: inline-block; text-align: left; margin-bottom: 30px;">
+                        <p><i class="fa-regular fa-clock"></i> <strong>制限時間:</strong> 120分 (2時間)</p>
+                        <p><i class="fa-solid fa-list-ol"></i> <strong>問題数:</strong> 100問</p>
+                        <p><i class="fa-solid fa-check-double"></i> <strong>合格基準:</strong> 600点以上 (各分野300点以上)</p>
+                    </div>
+                    <br>
+                    <button onclick="beginRealExam()" class="mock-exam-btn" style="width: 200px; font-size: 1.2rem;">
+                        試験開始 ▶
+                    </button>
+                </div>
+
+                <div class="question-box" id="question-box" style="display: none;">
+                    <div id="exam-info-bar"
+                        style="display:none; justify-content: space-between; align-items: center; margin-bottom: 15px; background: #fff3cd; padding: 15px; border-radius: 8px; border: 1px solid #ffeeba; color: #856404;">
+                        <span><strong>🏆 実戦模試</strong></span>
+                        <div id="exam-timer"
+                            style="font-family: monospace; font-size: 1.5rem; font-weight: bold; color: #e74c3c;">
+                            120:00
+                        </div>
+                    </div>
+
+                    <div class="question-nav-buttons">
+                        <button id="prev-q-btn" onclick="prevQuestion()" class="nav-btn blue">
+                            <i class="fa-solid fa-chevron-left"></i> 前へ
+                        </button>
+                        <button id="next-q-btn" onclick="nextQuestion()" class="nav-btn blue">
+                            次へ <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <button id="finish-btn" onclick="finishQuiz()" class="nav-btn red">
+                            終了
+                        </button>
+                    </div>
+
+                    <div id="progress-container">
+                        <div id="progress-bar"></div>
+                    </div>
+                    <div class="question-text" id="question"></div>
+                    <div id="options" class="options-grid"></div>
+                    <div class="explanation" id="explanation"></div>
+                </div>
+            </section>
+            <section id="view-minigame" class="content-view" style="display: none;">
+                <div class="header-title">
+                    <h2>🎮 ミニゲームセンター</h2>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 20px; color: #555;">モードを選択してください</h3>
+
+                    <div class="game-menu-grid">
+                        <div class="game-card" onclick="startMiniGame('sniper')">
+                            <div class="game-icon-bg" style="background: #e3f2fd; color: #2196f3;">
+                                <i class="fa-solid fa-crosshairs"></i>
+                            </div>
+                            <h3>Sniper</h3>
+                            <p>4択クイズ</p>
+                        </div>
+                        <div class="game-card" onclick="startMiniGame('blitz')">
+                            <div class="game-icon-bg" style="background: #fff3e0; color: #ff9800;">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <h3>Blitz</h3>
+                            <p>〇✕クイズ</p>
+                        </div>
+                        <div class="game-card" onclick="startMiniGame('memory')">
+                            <div class="game-icon-bg" style="background: #e8eaf6; color: #3f51b5;">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3>Memory</h3>
+                            <p>神経衰弱</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div id="generic-modal" class="modal" style="display: none;">
+        <div class="modal-content" style="text-align: center;">
+            <div class="modal-header" style="justify-content: center; border-bottom: none;">
+                <h2 id="g-modal-title" style="margin: 0; color: #2c3e50;">Thông báo</h2>
+                <span class="close" onclick="closeGenericModal()"
+                    style="position: absolute; right: 20px; top: 15px;">&times;</span>
+            </div>
+            <div id="g-modal-body" style="padding: 20px 0; font-size: 1.1em; line-height: 1.6; color: #555;">
+            </div>
+            <div id="g-modal-actions" style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
+            </div>
+        </div>
+    </div>
+    <div id="tudienjp"></div>
+    <script src="https://tudienjp.com/popup/tudienjp.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
