@@ -7442,41 +7442,61 @@ function loadQuestion() {
     if(bar) bar.style.width = percent + '%';
 }
 
-// [SỬA] Hàm kiểm tra đáp án (Tách logic Thi thử vs Luyện tập)
+// [SỬA] Hàm kiểm tra đáp án (Cho phép sửa lại trong chế độ Thi Thử)
 function checkAnswer(selectedIndex, correctIndex, explanation) {
-    // 1. Chặn click lại
     const allOptions = document.querySelectorAll(".option");
-    allOptions.forEach(el => el.onclick = null);
 
-    // 2. Lưu kết quả (Logic chung cho cả 2 chế độ)
-    if (!(shufflePos in answeredMap)) {
-        totalAnswered++;
-        const isCorrect = selectedIndex === correctIndex;
-        if (isCorrect) totalCorrect++;
-        answeredMap[shufflePos] = { selectedIndex, isCorrect };
-    }
-
-    // 3. Xử lý hiển thị (Khác nhau giữa 2 chế độ)
     if (isMockMode) {
         // === CHẾ ĐỘ THI THỬ (MOCK EXAM) ===
-        // Chỉ highlight đáp án đã chọn (màu trung tính), KHÔNG báo đúng/sai
+        
+        // 1. Xử lý giao diện: Xóa chọn cũ, chọn cái mới
+        allOptions.forEach(el => el.classList.remove("selected"));
         if (allOptions[selectedIndex]) {
             allOptions[selectedIndex].classList.add("selected");
         }
-        // Ẩn giải thích tuyệt đối
+
+        // 2. Cập nhật dữ liệu (Cho phép ghi đè đáp án cũ)
+        // Nếu câu này chưa từng trả lời thì tăng biến đếm, nếu trả lời rồi thì thôi
+        if (!(shufflePos in answeredMap)) {
+            totalAnswered++;
+        }
+
+        // Lưu/Cập nhật đáp án mới vào map
+        answeredMap[shufflePos] = { 
+            selectedIndex, 
+            isCorrect: selectedIndex === correctIndex 
+        };
+
+        // 3. Ẩn giải thích (Thi thử không hiện giải thích ngay)
         const expDiv = document.getElementById("explanation");
         if (expDiv) expDiv.style.display = "none";
 
+        // LƯU Ý: Không chạy lệnh allOptions.forEach(el => el.onclick = null); 
+        // để người dùng có thể chọn lại đáp án khác nếu muốn.
+
     } else {
         // === CHẾ ĐỘ LUYỆN TẬP (STUDY MODE) ===
-        // Hiện màu Xanh/Đỏ
+        
+        // 1. Chặn click lại ngay lập tức (Luyện tập thì chốt đáp án luôn)
+        allOptions.forEach(el => el.onclick = null);
+
+        // 2. Lưu kết quả (Chỉ lưu lần đầu)
+        if (!(shufflePos in answeredMap)) {
+            totalAnswered++;
+            const isCorrect = selectedIndex === correctIndex;
+            if (isCorrect) totalCorrect++;
+            answeredMap[shufflePos] = { selectedIndex, isCorrect };
+        }
+
+        // 3. Hiện màu Xanh/Đỏ
         if (selectedIndex === correctIndex) {
             allOptions[selectedIndex].classList.add("correct");
         } else {
             allOptions[selectedIndex].classList.add("incorrect");
             allOptions[correctIndex].classList.add("correct");
         }
-        // Hiện giải thích
+
+        // 4. Hiện giải thích
         const expDiv = document.getElementById("explanation");
         if (expDiv) {
             expDiv.innerHTML = explanation;
@@ -7487,37 +7507,43 @@ function checkAnswer(selectedIndex, correctIndex, explanation) {
 
 // [SỬA] Hàm khôi phục trạng thái câu hỏi (Khi bấm Quay lại/Tiếp theo)
 function restoreAnswerState() {
-    if (answeredMap[shufflePos]) {
-        const { selectedIndex, isCorrect } = answeredMap[shufflePos];
-        const allOptions = document.querySelectorAll(".option");
-        const questionData = currentQuestions[shuffledOrder[shufflePos]];
+    // Nếu câu này chưa trả lời thì không làm gì cả
+    if (!answeredMap[shufflePos]) return;
 
-        // Khóa click
-        allOptions.forEach(el => el.onclick = null);
+    const { selectedIndex, isCorrect } = answeredMap[shufflePos];
+    const allOptions = document.querySelectorAll(".option");
+    const questionData = currentQuestions[shuffledOrder[shufflePos]];
+
+    if (isMockMode) {
+        // === THI THỬ: Chỉ hiện lại cái đã chọn, KHÔNG KHÓA CLICK ===
+        if (allOptions[selectedIndex]) {
+            allOptions[selectedIndex].classList.add("selected");
+        }
         
-        if (isMockMode) {
-            // === THI THỬ: Chỉ hiện lại cái đã chọn ===
-            if (allOptions[selectedIndex]) {
-                allOptions[selectedIndex].classList.add("selected");
-            }
-            // Đảm bảo giải thích luôn ẩn
-            const expDiv = document.getElementById("explanation");
-            if (expDiv) expDiv.style.display = "none";
+        // Đảm bảo giải thích luôn ẩn
+        const expDiv = document.getElementById("explanation");
+        if (expDiv) expDiv.style.display = "none";
 
+        // QUAN TRỌNG: Không gọi "allOptions.forEach(el => el.onclick = null);" 
+        // để người dùng vẫn có thể bấm vào ô khác để sửa đáp án.
+
+    } else {
+        // === LUYỆN TẬP: Hiện lại đúng/sai và KHÓA CLICK ===
+        
+        // Khóa click vì luyện tập đã hiện đáp án rồi thì không cho chọn lại
+        allOptions.forEach(el => el.onclick = null);
+
+        if (isCorrect) {
+            if(allOptions[selectedIndex]) allOptions[selectedIndex].classList.add("correct");
         } else {
-            // === LUYỆN TẬP: Hiện lại đúng/sai và giải thích ===
-            if (isCorrect) {
-                if(allOptions[selectedIndex]) allOptions[selectedIndex].classList.add("correct");
-            } else {
-                if(allOptions[selectedIndex]) allOptions[selectedIndex].classList.add("incorrect");
-                if(allOptions[questionData.answer]) allOptions[questionData.answer].classList.add("correct");
-            }
-            
-            const expDiv = document.getElementById("explanation");
-            if (expDiv) {
-                expDiv.innerHTML = questionData.explanation;
-                expDiv.style.display = "block";
-            }
+            if(allOptions[selectedIndex]) allOptions[selectedIndex].classList.add("incorrect");
+            if(allOptions[questionData.answer]) allOptions[questionData.answer].classList.add("correct");
+        }
+        
+        const expDiv = document.getElementById("explanation");
+        if (expDiv) {
+            expDiv.innerHTML = questionData.explanation;
+            expDiv.style.display = "block";
         }
     }
 }
