@@ -845,7 +845,7 @@ const questionsByYear = {
                          "<li><strong>Mẹo ghi nhớ:</strong> Blockchain = <strong>Không thể sửa đổi (<code>改ざん防止</code>) + Minh bạch (phi tập trung)</strong>. Hãy tìm đáp án nào cần đến những đặc tính này.</li></ul>"
       },
       {
-        "question": "4月1日から5月31日までに、取引①から取引⑤があった。各取引の受注、売上計上、現金回収の状況が表のとおりであるとき、この取引先に対する5月31日時点の売掛金は何万円か。ここで、4月1日時点で売掛金残高はないものとする。<br><img src='img/pic26.png' width='433px'>",
+        "question": "4月1日から5月31日までに、取引①から取引⑤があった。各取引の受注、売上計上、現金回収の状況が表のとおりであるとき、この取引先に対する5月31日時点の売掛金は何万円か。ここで、4月1日時点で売掛金残高はないものとする。<br><img src='img/pic26.png' width='500px'>",
         "options": ["1000", "1,400", "2,300", "2,700"],
         "answer": 2,
         "explanation": "<h3><strong>Bản dịch</strong></h3>" +
@@ -1427,7 +1427,7 @@ const questionsByYear = {
                          "<li><strong>Mẹo ghi nhớ:</strong> Kiểm soát nội bộ hướng tới sự **hiệu quả và hợp lý**. Không có gì là tuyệt đối (như 'tất cả' - <code>全て</code>) và không nhất thiết phải luôn dùng công nghệ mới nhất nếu công nghệ cũ vẫn đáp ứng được yêu cầu (<code>強いるものではない</code>).</li></ul>"
       },
       {
-        "question": "あるコールセンターでは、顧客からの電話による問合せに対応するオペレーターを支援するシステムに、顧客とオペレーターの会話の音声を認識し、顧客の問合せに対する回答の候補をオペレーターのPCの画面に表示するAIを導入した。1日の対応件数は1,000件であり、問合せ内容によって二つのグループA、Bに分けた。AI導入前後の各グループの対応件数、対応時間が表のとおりであるとき、AI導入後に、1,000件の問合せに対応する時間は何％短縮できたか。<br><img src='img/pic54.png' width='433px'>",
+        "question": "あるコールセンターでは、顧客からの電話による問合せに対応するオペレーターを支援するシステムに、顧客とオペレーターの会話の音声を認識し、顧客の問合せに対する回答の候補をオペレーターのPCの画面に表示するAIを導入した。1日の対応件数は1,000件であり、問合せ内容によって二つのグループA、Bに分けた。AI導入前後の各グループの対応件数、対応時間が表のとおりであるとき、AI導入後に、1,000件の問合せに対応する時間は何％短縮できたか。<br><img src='img/pic54.png' width='500px'>",
         "options": ["30", "40", "50", "60"],
         "answer": 0,
         "explanation": "<h3><strong>Bản dịch</strong></h3>" +
@@ -1673,7 +1673,7 @@ const questionsByYear = {
                          "<li><strong>Mẹo ghi nhớ:</strong> Để tìm nhanh trong sách → dùng <strong>Mục lục (Index)</strong>.</li></ul>"
       },
       {
-        "question": "関係データベースで管理している次の“ログイン記録”表及び“部署”表において，ログイン結果が失敗となったことのある。又は，2022年4月10日09:00:00以前にログイン結果が成功となったことのある従業員が所属する部署名だけを全て挙げたものはどれか。<br><img src='img/pic66-1.png' width='433px'><img src='img/pic66-2.png' width='250px'>",
+        "question": "関係データベースで管理している次の“ログイン記録”表及び“部署”表において，ログイン結果が失敗となったことのある。又は，2022年4月10日09:00:00以前にログイン結果が成功となったことのある従業員が所属する部署名だけを全て挙げたものはどれか。<br><img src='img/pic66-1.png' width='500px'><img src='img/pic66-2.png' width='280px'>",
         "options": ["営業部，システム部", "営業部，人事部", "営業部，システム部，人事部", "システム部，人事部"],
         "answer": 2,
         "explanation": "<h3><strong>Bản dịch</strong></h3>" +
@@ -1797,7 +1797,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> Sóng <strong>thấp (<code>低い</code>)</strong> → đi <strong>xa</strong>, xuyên <strong>tốt</strong> (như radio AM). \'Băng tần Bạch kim\' (Platinum Band) là băng tần \'xịn\', \'quý\' (như bạch kim) vì nó có độ phủ sóng tốt, tức là nó phải là băng tần <strong>thấp (700-900 MHz)</strong>.</li></ul>'
       },
       {
-        'question': '見る人に意図が伝わりやすいデザインにするための四つの原則に関する次の記述中のa、bに入れる字句の適切な組合せはどれか。<br>【四つの原則】<br>近接 : 互いに関連する要素は近づけてグループにする。<br>a : 要素を意図したルールに基づき配置する。<br>反復 : 要素ごとにデザインルールを繰り返す。<br>b : 要素ごとの大小や強弱などの違いを明確にする。<br><img src=\'img/pic72.png\' width=\'240px\'>',
+        'question': '見る人に意図が伝わりやすいデザインにするための四つの原則に関する次の記述中のa、bに入れる字句の適切な組合せはどれか。<br>【四つの原則】<br>近接 : 互いに関連する要素は近づけてグループにする。<br>a : 要素を意図したルールに基づき配置する。<br>反復 : 要素ごとにデザインルールを繰り返す。<br>b : 要素ごとの大小や強弱などの違いを明確にする。<br><img src=\'img/pic72.png\' width=\'300px\'>',
         'options': ['ア', 'イ', 'ウ', 'エ'],
         'answer': 1,
         'explanation': '<h3><strong>Bản dịch</strong></h3>' +
@@ -1822,7 +1822,7 @@ const questionsByYear = {
                          '<li><strong>P</strong>roximity (Gần nhau - <code>近接</code>) → Gom nhóm những thứ liên quan.</li></ul></ul>'
       },
       {
-        'question': 'Webサービスを狙った攻撃に関する記述と攻撃の名称の適切な組合せはどれか。<br>a Webサービスが利用しているソフトウェアに脆弱性の存在が判明したとき、その修正プログラムが提供される前に、この脆弱性を突いて攻撃する。<br>b 複数のコンピュータから大量のパケットを一斉に送り付けることによって，Webサービスを正常に提供できなくさせる。<br>c 理論的にあり得るパスワードのパターンを順次試すことによって、正しいパスワードを見つけ、攻撃対象の Webサービスに侵入する。<br><img src=\'img/pic73.png\' width=\'490px\'>',
+        'question': 'Webサービスを狙った攻撃に関する記述と攻撃の名称の適切な組合せはどれか。<br>a Webサービスが利用しているソフトウェアに脆弱性の存在が判明したとき、その修正プログラムが提供される前に、この脆弱性を突いて攻撃する。<br>b 複数のコンピュータから大量のパケットを一斉に送り付けることによって，Webサービスを正常に提供できなくさせる。<br>c 理論的にあり得るパスワードのパターンを順次試すことによって、正しいパスワードを見つけ、攻撃対象の Webサービスに侵入する。<br><img src=\'img/pic73.png\' width=\'540px\'>',
         'options': ['ア', 'イ', 'ウ', 'エ'],
         'answer': 2,
         'explanation': '<h3><strong>Bản dịch</strong></h3>' +
@@ -1883,7 +1883,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> Bộ nhớ bán dẫn là những thứ \'im lặng\' (không có tiếng động cơ/đĩa quay), ví dụ như <strong>RAM, SSD, USB, thẻ nhớ</strong>. Ngược lại là bộ nhớ cơ/quang (HDD, CD, DVD).</li></ul>'
       },
       {
-        'question': '商品の税込価格を計算する表計算のワークシートがある。セルB1には消費税率が入力されており，セルB4～B6には税抜価格が入力されている。セルC4～C6に税込価格を表示するために，セルC4に式を入力し，セルC5、C6に複写する。セルC4に入力する式はどれか。<br><img src=\'img/pic76.png\' width=\'433px\'>',
+        'question': '商品の税込価格を計算する表計算のワークシートがある。セルB1には消費税率が入力されており，セルB4～B6には税抜価格が入力されている。セルC4～C6に税込価格を表示するために，セルC4に式を入力し，セルC5、C6に複写する。セルC4に入力する式はどれか。<br><img src=\'img/pic76.png\' width=\'500px\'>',
         'options': ['B$4*(1+B$1)', 'B$4*(1+B1)', 'B4*(1+B$1)', 'B4*(1+B1)'],
         'answer': 2,
         'explanation': '<h3><strong>Bản dịch</strong></h3>' +
@@ -2700,7 +2700,7 @@ const questionsByYear = {
                        '<li><strong>VR (Virtual):</strong> ẢO 100% (Thế giới ảo <code>仮想空間</code>).</li></ul></ul>'
     },
     {
-      'question': '式は定期発注方式で原料の発注量を求める計算式である。a～cに入れる字句の適切な組合せはどれか。<br><br>発注量＝(<span class=\'bb\'>a</span>＋調達期間)×毎日の使用予定量＋<span class=\'bb\'>b</span>－現在の在庫量－<span class=\'bb\'>c</span><br><img src=\'img/24.png\' width=\'406\' height=\'147\' alt=\'24.png/image-size:406×147\'>',
+      'question': '式は定期発注方式で原料の発注量を求める計算式である。a～cに入れる字句の適切な組合せはどれか。<br><br>発注量＝(<span class=\'bb\'>a</span>＋調達期間)×毎日の使用予定量＋<span class=\'bb\'>b</span>－現在の在庫量－<span class=\'bb\'>c</span><br><img src=\'img/24.png\' width=\'450\' height=\'180\' alt=\'24.png/image-size:406×147\'>',
       'options': ['ア', 'イ', 'ウ', 'エ'],
       'answer': 2,
       'explanation': '<h3><strong>Bản dịch</strong></h3>' +
@@ -3029,7 +3029,7 @@ const questionsByYear = {
                        '<li><strong>Delphi (<code>デルファイ</code>)</strong> = Hỏi <strong>chuyên gia (<code>有識者</code>)</strong> nhiều lần (<code>繰り返し</code>).</li></ul></ul>'
     },
     {
-      'question': '表はA社の期末の損益計算書から抜粋した資料である。当期純利益が800百万円であるとき，販売費及び一般管理費は何百万円か。<br><div class=\'img_margin\'><img src=\'img/08.png\' width=\'268\' height=\'234\' alt=\'08.png/image-size:268×234\'></div>',
+      'question': '表はA社の期末の損益計算書から抜粋した資料である。当期純利益が800百万円であるとき，販売費及び一般管理費は何百万円か。<br><div class=\'img_margin\'><img src=\'img/08.png\' width=\'360\' height=\'325\' alt=\'08.png/image-size:268×234\'></div>',
       'options': ['850', '900', '1,000', '1,200'],
       'answer': 2,
       'explanation': '<h3><strong>Bản dịch</strong></h3>' +
@@ -4136,7 +4136,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> <strong>Smartphone = Cảm ứng điện dung (<code>静電容量方式</code>)</strong>. (Phân biệt với <code>感圧式</code> (loại cũ, phải nhấn) và <code>電磁誘導方式</code> (phải dùng bút)).</li></ul>'
       },
       {
-        'question': '情報セキュリティの3要素である機密性，完全性及び可用性と，それらを確保するための対策の例a～cの適切な組合せはどれか。<br><br><ol type=\'a\'><li>アクセス制御</li><li>デジタル署名</li><li>ディスクの二重化</li></ol><br><img src=\'img/75.png\' width=\'213\' height=\'153\' alt=\'75.png/image-size:213×153\'>',
+        'question': '情報セキュリティの3要素である機密性，完全性及び可用性と，それらを確保するための対策の例a～cの適切な組合せはどれか。<br><br><ol type=\'a\'><li>アクセス制御</li><li>デジタル署名</li><li>ディスクの二重化</li></ol><br><img src=\'img/75.png\' width=\'250\' height=\'190\' alt=\'75.png/image-size:213×153\'>',
         'options': ['ア', 'イ', 'ウ', 'エ'],
         'answer': 3,
         'explanation': '<h3><strong>Bản dịch</strong></h3>' +
@@ -4529,7 +4529,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> Ghi lại một chuỗi hành động để tự động hóa → <strong>Macro</strong>.</li></ul>'
       },
       {
-        'question': '暗号化方式の特徴について記した表において，表中のa～dに入れる字句の適切な組合せはどれか。<div class=\'img_margin\'><img src=\'img/57_1.png\' width=\'491\' height=\'128\' alt=\'57_1.png/image-size:491×128\'></div><br><img src=\'img/57_2.png\' width=\'356\' height=\'154\' alt=\'57_2.png/image-size:356×154\'>',
+        'question': '暗号化方式の特徴について記した表において，表中のa～dに入れる字句の適切な組合せはどれか。<div class=\'img_margin\'><img src=\'img/57_1.png\' width=\'520\' height=\'160\' alt=\'57_1.png/image-size:491×128\'></div><br><img src=\'img/57_2.png\' width=\'410\' height=\'180\' alt=\'57_2.png/image-size:356×154\'>',
         'options': ['ア', 'イ', 'ウ', 'エ'],
         'answer': 2,
         'explanation': '<h3><strong>Bản dịch</strong></h3>' +
@@ -5305,7 +5305,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> <strong>R</strong>equest <strong>F</strong>or <strong>P</strong>roposal → Yêu cầu (gửi) <strong>Đề xuất (P</strong>roposal - <code>提案書</code>).</li></ul>'
       },
       {
-        'question': '製品Aを1個生産するのに部品aが2個，部品bが1個必要である。部品aは1回の発注数量150個，調達期間1週間，部品bは1回の発注数量100個，調達期間2週間の購買部品である。製品Aの6週間の生産計画と，部品a，部品bの1週目の手持在庫が表のとおりであるとき，遅くとも何週目に部品を発注する必要があるか。ここで，部品の発注，納品はそれぞれ週の初めに行われるものとし，納品された部品はすぐに生産に利用できるものとする。<br><img src=\'img/r5-33.png\' width=\'400px\' height=\'auto\'>',
+        'question': '製品Aを1個生産するのに部品aが2個，部品bが1個必要である。部品aは1回の発注数量150個，調達期間1週間，部品bは1回の発注数量100個，調達期間2週間の購買部品である。製品Aの6週間の生産計画と，部品a，部品bの1週目の手持在庫が表のとおりであるとき，遅くとも何週目に部品を発注する必要があるか。ここで，部品の発注，納品はそれぞれ週の初めに行われるものとし，納品された部品はすぐに生産に利用できるものとする。<br><img src=\'img/r5-33.png\' width=\'600px\' height=\'auto\'>',
         'options': [
           '2',
           '3',
@@ -5547,7 +5547,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> 1. Tìm đường dài nhất (đường găng). 2. Kiểm tra xem công việc thay đổi có nằm trên đường găng không. 3. Tính lại tổng thời gian của tất cả các đường dựa trên thay đổi. 4. Tìm đường găng mới và so sánh với đường găng cũ.</li></ul>'
       },
       {
-        'question': 'ソフトウェア開発における，テストに関する記述a～cとテスト工程の適切な組合せはどれか。<br><ol type=\"a\"><li>運用予定時間内に処理が終了することを確認する。</li><li>ソフトウェア間のインタフェースを確認する。</li><li>プログラムの内部パスを網羅的に確認する。</li></ol><br><img src=\'img/r5-42.png\' width=\'400px\' height=\'auto\'>',
+        'question': 'ソフトウェア開発における，テストに関する記述a～cとテスト工程の適切な組合せはどれか。<br><ol type=\"a\"><li>運用予定時間内に処理が終了することを確認する。</li><li>ソフトウェア間のインタフェースを確認する。</li><li>プログラムの内部パスを網羅的に確認する。</li></ol><br><img src=\'img/r5-42.png\' width=\'450px\' height=\'auto\'>',
         'options': [
           'ア',
           'イ',
@@ -5675,7 +5675,7 @@ const questionsByYear = {
                          '<li><strong>MTTR</strong> (Mean Time <strong>To Repair</strong>): Thời gian <strong>SỬA</strong>. Cần <strong>sửa nhanh hơn (<code>時間短縮</code>)</strong>.</li></ul></ul>'
       },
       {
-        'question': 'あるホスティングサービスのSLAの内容にa～cがある。これらと関連するITサービスマネジメントの管理との適切な組合せはどれか。<br><ol type=\"a\"><li>サーバが稼働している時間</li><li>ディスクの使用量が設定したしきい値に達したことを検出した後に，指定された担当者に通知するまでの時間</li><li>不正アクセスの検知後に，指定された担当者に通知するまでの時間</li></ol><br><img src=\'img/r5-47.png\' width=\'400px\' height=\'auto\'>',
+        'question': 'あるホスティングサービスのSLAの内容にa～cがある。これらと関連するITサービスマネジメントの管理との適切な組合せはどれか。<br><ol type=\"a\"><li>サーバが稼働している時間</li><li>ディスクの使用量が設定したしきい値に達したことを検出した後に，指定された担当者に通知するまでの時間</li><li>不正アクセスの検知後に，指定された担当者に通知するまでの時間</li></ol><br><img src=\'img/r5-47.png\' width=\'450px\' height=\'auto\'>',
         'options': [
           'ア',
           'イ',
@@ -5971,7 +5971,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> Chỉ cần "ghé thăm" (Drive-by) là bị "tải về" (Download) → <strong>Drive-by Download</strong>.</li></ul>'
       },
       {
-        'question': '関係データベースで管理された"会員管理"表を正規化して，"店舗"表，"会員種別"表及び"会員"表に分割した。\"会員\"表として，適切なものはどれか。ここで，表中の下線は主キーを表し，一人の会員が複数の店舗に登録した場合は，会員番号を店舗ごとに付与するものとする。<br><img src=\'img/r5-59.png\' width=\'400px\' height=\'auto\'>',
+        'question': '関係データベースで管理された"会員管理"表を正規化して，"店舗"表，"会員種別"表及び"会員"表に分割した。\"会員\"表として，適切なものはどれか。ここで，表中の下線は主キーを表し，一人の会員が複数の店舗に登録した場合は，会員番号を店舗ごとに付与するものとする。<br><img src=\'img/r5-59.png\' width=\'500px\' height=\'auto\'>',
         'options': [
           'ア',
           'イ',
@@ -5995,7 +5995,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> Chuẩn hóa là "tách những gì lặp đi lặp lại ra một bảng riêng". Bảng chính (Thành viên) phải giữ lại các <strong>khóa ngoại (Foreign Keys)</strong> (<code>店舗番号</code>, <code>会員種別番号</code>) để liên kết đến các bảng con đã bị tách ra.</li></ul>'
       },
       {
-        'question': '手続 printArray は，配列 integerArray の要素を並べ替えて出力する。手続 printArray を呼び出したときの出力はどれか。ここで，配列の要素番号は1から始まる。<br><br>〔プログラム〕<br><img src=\'img/r5-60.png\' width=\'400px\' height=\'auto\'>',
+        'question': '手続 printArray は，配列 integerArray の要素を並べ替えて出力する。手続 printArray を呼び出したときの出力はどれか。ここで，配列の要素番号は1から始まる。<br><br>〔プログラム〕<br><img src=\'img/r5-60.png\' width=\'500px\' height=\'auto\'>',
         'options': [
           '1，2，3，4',
           '1，3，2，4',
@@ -6414,7 +6414,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> <code>又は</code> = <strong>OR (<code>論理和</code>)</strong>. (<code>かつ</code> = <strong>AND (<code>論理積</code>)</strong>).</li></ul>'
       },
   {
-        'question': '品質管理担当者が行っている検査を自動化することを考えた。10,000枚の製品画像と，それに対する品質管理担当者による不良品かどうかの判定結果を学習データとして与えることによって，製品が不良品かどうかを判定する機械学習モデルを構築した。100枚の製品画像に対してテストを行った結果は表のとおりである。品質管理担当者が不良品と判定した製品画像数に占める，機械学習モデルの判定が不良品と判定した製品画像数の割合を再現率としたとき，このテストにおける再現率は幾らか。<br><img src=\'img/r5-76.png\' width=\'400px\' height=\'auto\'>',
+        'question': '品質管理担当者が行っている検査を自動化することを考えた。10,000枚の製品画像と，それに対する品質管理担当者による不良品かどうかの判定結果を学習データとして与えることによって，製品が不良品かどうかを判定する機械学習モデルを構築した。100枚の製品画像に対してテストを行った結果は表のとおりである。品質管理担当者が不良品と判定した製品画像数に占める，機械学習モデルの判定が不良品と判定した製品画像数の割合を再現率としたとき，このテストにおける再現率は幾らか。<br><img src=\'img/r5-76.png\' width=\'500px\' height=\'auto\'>',
         'options': [
           '0.05',
           '0.25',
@@ -6671,7 +6671,7 @@ const questionsByYear = {
                          '<li><strong>Mẹo ghi nhớ:</strong> <strong>Boot</strong> (Khởi động - <code>起動</code>) + <strong>Secure</strong> (An toàn - <code>署名を検証</code>) → <strong>Secure Boot</strong>.</li></ul>'
       },
       {
-        'question': 'ハイブリッド暗号方式を用いてメッセージを送信したい。メッセージと復号用の鍵の暗号化手順を表した図において，メッセージの暗号化に使用する鍵を(1)とし，(1)の暗号化に使用する鍵を(2)としたとき，図のa，bに入れる字句の適切な組合せはどれか。<br><img src=\'img/r5-86.png\' width=\'500px\' height=\'auto\'><br><img src=\'img/r5-86a.png\' width=\'300px\' height=\'auto\'>',
+        'question': 'ハイブリッド暗号方式を用いてメッセージを送信したい。メッセージと復号用の鍵の暗号化手順を表した図において，メッセージの暗号化に使用する鍵を(1)とし，(1)の暗号化に使用する鍵を(2)としたとき，図のa，bに入れる字句の適切な組合せはどれか。<br><img src=\'img/r5-86.png\' width=\'560px\' height=\'auto\'><br><img src=\'img/r5-86a.png\' width=\'330px\' height=\'auto\'>',
         'options': [
           'ア',
           'イ',
@@ -7253,6 +7253,7 @@ function restoreQuizStructure() {
 
     // HTML chuẩn của phần thi/học
     box.innerHTML = `
+        <div id="question-nav-map" class="question-map-container"></div>
         <div id="exam-info-bar" style="display:none; justify-content: space-between; align-items: center; margin-bottom: 15px; background: #fff3cd; padding: 15px; border-radius: 8px; border: 1px solid #ffeeba; color: #856404;">
             <span><strong>🏆 実戦模試</strong></span>
             <div id="exam-timer" style="font-family: monospace; font-size: 1.5rem; font-weight: bold; color: #e74c3c;">120:00</div>
@@ -7440,6 +7441,7 @@ function loadQuestion() {
     const percent = ((shufflePos + 1) / shuffledOrder.length) * 100;
     const bar = document.getElementById("progress-bar");
     if(bar) bar.style.width = percent + '%';
+    renderQuestionMap();
 }
 
 // [SỬA] Hàm kiểm tra đáp án (Cho phép sửa lại trong chế độ Thi Thử)
@@ -7473,6 +7475,7 @@ function checkAnswer(selectedIndex, correctIndex, explanation) {
 
         // LƯU Ý: Không chạy lệnh allOptions.forEach(el => el.onclick = null); 
         // để người dùng có thể chọn lại đáp án khác nếu muốn.
+        renderQuestionMap();
 
     } else {
         // === CHẾ ĐỘ LUYỆN TẬP (STUDY MODE) ===
@@ -8217,4 +8220,52 @@ document.addEventListener('DOMContentLoaded', () => {
     loadData();
     switchMainTab('study'); // Mặc định vào tab học
 });
+// --- [SỬA LẠI] Hàm vẽ thanh điều hướng câu hỏi (Ẩn khung khi không dùng) ---
+function renderQuestionMap() {
+    const container = document.getElementById('question-nav-map');
+    
+    // 1. Nếu không tìm thấy container trong HTML thì thoát
+    if (!container) return;
 
+    // 2. Nếu KHÔNG PHẢI chế độ Thi Thử -> ẨN HOÀN TOÀN
+    if (!isMockMode) {
+        container.innerHTML = ''; 
+        container.style.display = 'none'; // [QUAN TRỌNG] Dòng này giúp ẩn khung xám đi
+        return;
+    }
+
+    // 3. Nếu LÀ chế độ Thi Thử -> HIỆN LẠI và vẽ nút
+    container.style.display = 'flex'; // Hiện lại (khớp với CSS .question-map-container)
+    container.innerHTML = ''; // Xóa nội dung cũ trước khi vẽ mới
+
+    currentQuestions.forEach((_, index) => {
+        const btn = document.createElement('div');
+        btn.className = 'q-map-btn';
+        btn.innerText = index + 1;
+        
+        // Nếu đã làm -> thêm class màu xanh nhạt
+        if (answeredMap[index]) {
+            btn.classList.add('answered');
+        }
+
+        // Nếu đang xem -> thêm class màu xanh đậm
+        if (index === shufflePos) {
+            btn.classList.add('current');
+            // Tự động cuộn thanh ngang để nút hiện tại ra giữa
+            setTimeout(() => {
+                btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }, 100);
+        }
+
+        // Khi click vào nút số -> Gọi hàm nhảy trang
+        btn.onclick = () => jumpToQuestion(index);
+
+        container.appendChild(btn);
+    });
+}
+
+// --- [HÀM 2] Xử lý nhảy đến câu hỏi bất kỳ ---
+function jumpToQuestion(index) {
+    shufflePos = index; // Cập nhật vị trí câu hỏi hiện tại
+    loadQuestion();     // Tải lại nội dung câu hỏi đó
+}

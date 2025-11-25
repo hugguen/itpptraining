@@ -813,3 +813,58 @@ body {
     box-shadow: 0 4px 15px rgba(52, 152, 219, 0.1);
     display: none;
 }
+/* === THANH ĐIỀU HƯỚNG CÂU HỎI (NGANG) === */
+.question-map-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;              /* Khoảng cách giữa các nút */
+    overflow-x: auto;      /* Cho phép cuộn ngang */
+    padding: 10px 5px;
+    margin-bottom: 15px;   /* Cách thanh Timer một chút */
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    
+    /* Ẩn thanh cuộn nhưng vẫn vuốt được */
+    scrollbar-width: thin;
+}
+
+/* Từng ô số */
+.q-map-btn {
+    flex: 0 0 36px;        /* Kích thước cố định */
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;    /* Hình tròn */
+    border: 1px solid #ccc;
+    background: white;
+    color: #555;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.q-map-btn:hover {
+    background: #e3f2fd;
+    border-color: #3498db;
+}
+
+/* Trạng thái: Đã làm (Xanh nhạt) */
+.q-map-btn.answered {
+    background: #e3f2fd;
+    border-color: #3498db;
+    color: #2980b9;
+}
+
+/* Trạng thái: Đang xem (Xanh đậm, to hơn) */
+.q-map-btn.current {
+    background: #3498db;
+    color: white;
+    border-color: #2980b9;
+    transform: scale(1.15);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 2;
+}
