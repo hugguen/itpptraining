@@ -868,3 +868,46 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 2;
 }
+/* === FIX LỖI KHÔNG CUỘN ĐƯỢC TRÊN ĐIỆN THOẠI === */
+@media (max-width: 768px) {
+    /* 1. Mở khóa body để cho phép cuộn toàn trang */
+    body {
+        height: auto !important;       /* Chiều cao tự động giãn theo nội dung */
+        overflow-y: auto !important;   /* Bật lại thanh cuộn dọc */
+        -webkit-overflow-scrolling: touch; /* Giúp cuộn mượt hơn trên iPhone/iPad */
+    }
+
+    /* 2. Reset khung bao ngoài */
+    .app-container {
+        height: auto !important;       /* Không giới hạn chiều cao màn hình */
+        overflow: visible !important;  /* Hiển thị hết nội dung */
+        display: block;                /* Xếp chồng sidebar và content */
+    }
+
+    /* 3. Reset khung nội dung chính */
+    .main-content {
+        height: auto !important;
+        overflow: visible !important;  /* Bỏ thanh cuộn riêng, dùng thanh cuộn của trình duyệt */
+        padding-bottom: 100px;         /* Thêm khoảng trống ở dưới để dễ thao tác */
+    }
+
+    /* 4. Điều chỉnh Sidebar cho gọn trên mobile */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 10px;
+    }
+    
+    /* 5. Ẩn bớt thông tin không cần thiết trên header mobile để đỡ chật */
+    .header-title {
+        margin-bottom: 10px;
+    }
+    
+    /* 6. Đảm bảo các nút bấm to ra chút để dễ ấn */
+    .nav-btn {
+        padding: 12px 20px;
+    }
+}
